@@ -24,7 +24,7 @@ class BLTouchKlipperPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.Templa
 	def get_update_information(self):
 		return dict(
 			BLTouchKlipper=dict(
-				displayName="BLTouchKlipper Plugin",
+				displayName="BLTouchKlipper",
 				displayVersion=self._plugin_version,
 
 				# version check: github repository
