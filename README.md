@@ -25,7 +25,7 @@ If you experience issues with this plugin or need assistance please use the issu
 Check out jneiliii 's other plugins [here](https://plugins.octoprint.org/by_author/#jneilliii)
 
 ## Support jneiliii 's Efforts
-If you would like to support the programmer that built this plugin (jneilliii) to help them develop further plugins
+If you would like to support the programmer that built this plugin (jneilliii) to help them develop further plugins below please find the original links they had provided on the original README.
 
 [Patreon](https://www.patreon.com/jneilliii)
 [PayPal](https://paypal.me/jneilliii)
