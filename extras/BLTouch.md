@@ -1,7 +1,7 @@
 ---
 layout: plugin
 
-id: BLTouch
+id: BLTouch-Klipper
 title: OctoPrint-BLTouch-Klipper
 description: Simple plugin to add BLTouch controls to the Control tab.
 author: jneilliii
