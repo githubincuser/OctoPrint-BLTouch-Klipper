@@ -28,7 +28,7 @@ $(function() {
 
 					]}
 				];
-				if(self.settingsViewModel.settings.plugins.BLTouch.cmdRepeatability() !== ""){
+				if(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdRepeatability() !== ""){
 				    buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdRepeatability());", name: "Repeat Test", confirm: "You are about to run a repeatability test.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
                 }
 				buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdSaveSettings());", name: "Save", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
@@ -71,7 +71,7 @@ $(function() {
 
     // view model class, parameters for constructor, container to bind to
     ADDITIONAL_VIEWMODELS.push([
-        BLTouchViewModel,
+        BLTouchKlipperViewModel,
 
         // e.g. loginStateViewModel, settingsViewModel, ...
         ["controlViewModel","settingsViewModel"],
