@@ -21,16 +21,16 @@ plugin_version = "0.1"
 plugin_description = "Plugin to add control buttons to the control tab of OctoPrint for the BLTouch."
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "jneilliii"
+plugin_author = "githubincuser"
 
 # The plugin's author's mail address.
-plugin_author_email = "jneilliii@gmail.com"
+plugin_author_email = ""
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
 plugin_url = "https://github.com/githubincuser/OctoPrint-BLTouch-Klipper"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
-plugin_license = "AGPLv3"
+plugin_license = ""
 
 # Any additional requirements besides OctoPrint should be listed here
 plugin_requires = []
