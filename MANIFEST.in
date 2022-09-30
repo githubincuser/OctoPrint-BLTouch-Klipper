@@ -1,2 +1,2 @@
 include README.md
-recursive-include octoprint_BLTouch *
+recursive-include octoprint_BLTouch_Klipper *
