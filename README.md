@@ -27,4 +27,5 @@ Check out jneiliii 's other plugins [here](https://plugins.octoprint.org/by_auth
 ## Support jneiliii 's Efforts
 If you would like to support the programmer that built this plugin (jneilliii) to help them develop further plugins
 
-[![Patreon](https://www.patreon.com/jneilliii) [![paypal]](https://paypal.me/jneilliii)
+[![Patreon]](https://www.patreon.com/jneilliii)
+[![PayPal]](https://paypal.me/jneilliii)
