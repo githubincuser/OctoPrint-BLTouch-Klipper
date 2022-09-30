@@ -2,16 +2,16 @@
 layout: plugin
 
 id: BLTouch
-title: OctoPrint-BLTouch
+title: OctoPrint-BLTouch-Klipper
 description: Simple plugin to add BLTouch controls to the Control tab.
 author: jneilliii
 license: AGPLv3
 
 date: 2017-01-10
 
-homepage: https://github.com/jneilliii/OctoPrint-BLTouch
-source: https://github.com/jneilliii/OctoPrint-BLTouch
-archive: https://github.com/jneilliii/OctoPrint-BLTouch/archive/master.zip
+homepage: https://github.com/githubincuser/OctoPrint-BLTouch-Klipper
+source: https://github.com/githubincuser/OctoPrint-BLTouch-Klipper
+archive: https://github.com/githubincuser/OctoPrint-BLTouch-Klipper/archive/master.zip
 
 follow_dependency_links: false
 
@@ -40,4 +40,3 @@ compatibility:
 
 Simple plugin to add BLTouch controls to the Control tab.
 
-http://plugins.octoprint.org/plugin/BLTouch/
