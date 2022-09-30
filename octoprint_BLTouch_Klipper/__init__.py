@@ -14,7 +14,7 @@ class BLTouchKlipperPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.Templa
 	##-- Settings hooks
 	def get_settings_defaults(self):
 		return dict(cmdProbeUp="BLTOUCH_DEBUG COMMAND=pin_up", cmdProbeDown="BLTOUCH_DEBUG COMMAND=pin_down", cmdSelfTest="",
-					cmdHomeAll="G28", cmdProbeBed="G29", cmdSaveSettings="SAVE_CONFIG", confirmation=True, cmdRepeatability="")
+					cmdHomeAll="G28", cmdProbeBed="G29", cmdSaveSettings="SAVE_CONFIG", cmdRepeatability="")
 
 	##-- Template hooks
 	def get_template_configs(self):
