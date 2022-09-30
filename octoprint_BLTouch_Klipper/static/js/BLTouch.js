@@ -20,55 +20,55 @@ $(function() {
 		self.cmdSaveSettings = ko.observable();
 
 		self.getAdditionalControls = function() {
-			if (self.settingsViewModel.settings.plugins.BLTouch.confirmation()) {
+			if (self.settingsViewModel.settings.plugins.BLTouchKlipper.confirmation()) {
 				var buttons = [
 					{ name: "BLTouch", type: "section", layout: "horizontal", children: [
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdProbeUp());", name: "Probe Up", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdProbeDown());", name: "Probe Down", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdSelfTest());", name: "Test", confirm: "You are about to run a self test.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdHomeAll());", name: "Home All", confirm: "You are about to Home all Axes.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdProbeBed().split('\\n'));", name: "Probe Bed", confirm: "You are about to probe the bed.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdProbeUp());", name: "Probe Up", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdProbeDown());", name: "Probe Down", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdSelfTest());", name: "Test", confirm: "You are about to run a self test.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdHomeAll());", name: "Home All", confirm: "You are about to Home all Axes.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdProbeBed().split('\\n'));", name: "Probe Bed", confirm: "You are about to probe the bed.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
 
 					]}
 				];
 				if(self.settingsViewModel.settings.plugins.BLTouch.cmdRepeatability() !== ""){
-				    buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdRepeatability());", name: "Repeat Test", confirm: "You are about to run a repeatability test.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
+				    buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdRepeatability());", name: "Repeat Test", confirm: "You are about to run a repeatability test.", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
                 }
-				buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdSaveSettings());", name: "Save", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
+				buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdSaveSettings());", name: "Save", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
 			} else {
 				var buttons =[
 					{ name: "BLTouch", type: "section", layout: "horizontal", children: [
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdProbeUp());", name: "Probe Up", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdProbeDown());", name: "Probe Down", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdSelfTest());", name: "Test", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdHomeAll());", name: "HomeAll", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
-						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdProbeBed().split('\\n'));", name: "Probe Bed", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdProbeUp());", name: "Probe Up", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdProbeDown());", name: "Probe Down", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdSelfTest());", name: "Test", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdHomeAll());", name: "HomeAll", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
+						{type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdProbeBed().split('\\n'));", name: "Probe Bed", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"},
 					]}
 				];
 				if(self.settingsViewModel.settings.plugins.BLTouch.cmdRepeatability() !== ""){
-				    buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdRepeatability());", name: "Repeat", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
+				    buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdRepeatability());", name: "Repeat", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
                 }
-				buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouch.cmdSaveSettings());", name: "Save", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
+				buttons[0].children.push({type: "javascript", javascript: "OctoPrint.control.sendGcode(self.settings.settings.plugins.BLTouchKlipper.cmdSaveSettings());", name: "Save", enabled: "!self.isPrinting() && self.loginState.hasPermission(self.access.permissions.CONTROL) && self.isOperational()"});
 			}
 			return buttons;
 		};
 
 		self.onBeforeBinding = function() {
-			self.cmdProbeUp(self.settingsViewModel.settings.plugins.BLTouch.cmdProbeUp());
-			self.cmdProbeDown(self.settingsViewModel.settings.plugins.BLTouch.cmdProbeDown());
-			self.cmdSelfTest(self.settingsViewModel.settings.plugins.BLTouch.cmdSelfTest());
-			self.cmdReleaseAlarm(self.settingsViewModel.settings.plugins.BLTouch.cmdHomeAll());
-			self.cmdProbeBed(self.settingsViewModel.settings.plugins.BLTouch.cmdProbeBed());
-			self.cmdSaveSettings(self.settingsViewModel.settings.plugins.BLTouch.cmdSaveSettings());
+			self.cmdProbeUp(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdProbeUp());
+			self.cmdProbeDown(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdProbeDown());
+			self.cmdSelfTest(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdSelfTest());
+			self.cmdReleaseAlarm(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdHomeAll());
+			self.cmdProbeBed(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdProbeBed());
+			self.cmdSaveSettings(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdSaveSettings());
 		};
 
 		self.onEventSettingsUpdated = function (payload) {
-            self.cmdProbeUp = self.settingsViewModel.settings.plugins.BLTouch.cmdProbeUp();
-            self.cmdProbeDown = self.settingsViewModel.settings.plugins.BLTouch.cmdProbeDown();
-            self.cmdSelfTest = self.settingsViewModel.settings.plugins.BLTouch.cmdSelfTest();
-            self.cmdReleaseAlarm = self.settingsViewModel.settings.plugins.BLTouch.cmdHomeAll();
-			self.cmdProbeBed(self.settingsViewModel.settings.plugins.BLTouch.cmdProbeBed());
-			self.cmdSaveSettings(self.settingsViewModel.settings.plugins.BLTouch.cmdSaveSettings());
+            self.cmdProbeUp = self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdProbeUp();
+            self.cmdProbeDown = self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdProbeDown();
+            self.cmdSelfTest = self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdSelfTest();
+            self.cmdReleaseAlarm = self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdHomeAll();
+			self.cmdProbeBed(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdProbeBed());
+			self.cmdSaveSettings(self.settingsViewModel.settings.plugins.BLTouchKlipper.cmdSaveSettings());
         };
     };
 
@@ -80,6 +80,6 @@ $(function() {
         ["controlViewModel","settingsViewModel"],
 
         // e.g. #settings_plugin_BLTouch, #tab_plugin_BLTouch, ...
-        ["settings_plugin_BLTouch_form"]
+        ["settings_plugin_BLTouchKlipper_form"]
     ]);
 });
