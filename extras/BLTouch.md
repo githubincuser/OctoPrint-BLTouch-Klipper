@@ -20,11 +20,9 @@ tags:
 - BLTouch
 
 screenshots:
-- url: /assets/img/plugins/BLTouch/screenshot.png
-  alt: BLTouch
-  caption: BLTouch Controls
 
-featuredimage: /assets/img/plugins/BLTouch/screenshot.png
+
+featuredimage:
 
 compatibility:
   # list of compatible versions, for example 1.2.0. If left empty no specific version requirement will be assumed
