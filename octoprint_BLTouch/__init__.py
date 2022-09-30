@@ -13,8 +13,8 @@ class BLTouchPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugi
 
 	##-- Settings hooks
 	def get_settings_defaults(self):
-		return dict(cmdProbeUp="M280 P0 S90", cmdProbeDown="M280 P0 S10", cmdSelfTest="M280 P0 S120",
-					cmdReleaseAlarm="M280 P0 S160", cmdProbeBed="G29", cmdSaveSettings="M500", confirmation=True, cmdRepeatability="")
+		return dict(cmdProbeUp="BLTOUCH_DEBUG COMMAND=pin_up", cmdProbeDown="BLTOUCH_DEBUG COMMAND=pin_down", cmdSelfTest="",
+					cmdHomeALL="G28", cmdProbeBed="G29", cmdSaveSettings="SAVE_CONFIG", confirmation=True, cmdRepeatability="")
 
 	##-- Template hooks
 	def get_template_configs(self):
@@ -24,13 +24,13 @@ class BLTouchPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugi
 	def get_update_information(self):
 		return dict(
 			BLTouch=dict(
-				displayName="BLTouch Plugin",
+				displayName="BLTouchKlipper Plugin",
 				displayVersion=self._plugin_version,
 
 				# version check: github repository
 				type="github_release",
-				user="jneilliii",
-				repo="OctoPrint-BLTouch",
+				user="githubincuser",
+				repo="OctoPrint-BLTouch-Klipper",
 				current=self._plugin_version,
 				stable_branch=dict(
 					name="Stable",
@@ -46,12 +46,12 @@ class BLTouchPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugi
 				],
 
 				# update method: pip
-				pip="https://github.com/jneilliii/OctoPrint-Bltouch/archive/{target_version}.zip"
+				pip="https://github.com/githubincuser/OctoPrint-BLTouch-Klipper/archive/{target_version}.zip"
 			)
 		)
 
 
-__plugin_name__ = "BLTouch Plugin"
+__plugin_name__ = "BLTouchKlipper Plugin"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 
