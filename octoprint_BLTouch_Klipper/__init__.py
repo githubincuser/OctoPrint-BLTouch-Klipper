@@ -4,11 +4,11 @@ from __future__ import absolute_import
 import octoprint.plugin
 
 
-class BLTouchPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugin, octoprint.plugin.SettingsPlugin):
+class BLTouchKlipperPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugin, octoprint.plugin.SettingsPlugin):
 	##-- AssetPlugin
 	def get_assets(self):
 		return dict(
-			js=["js/BLTouch.js"]
+			js=["js/BLTouchKlipper.js"]
 		)
 
 	##-- Settings hooks
@@ -23,7 +23,7 @@ class BLTouchPlugin(octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugi
 	##~~ Softwareupdate hook
 	def get_update_information(self):
 		return dict(
-			BLTouch=dict(
+			BLTouchKlipper=dict(
 				displayName="BLTouchKlipper Plugin",
 				displayVersion=self._plugin_version,
 
@@ -57,7 +57,7 @@ __plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
 	global __plugin_implementation__
-	__plugin_implementation__ = BLTouchPlugin()
+	__plugin_implementation__ = BLTouchKlipperPlugin()
 
 	global __plugin_hooks__
 	__plugin_hooks__ = {
